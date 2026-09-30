@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Gold Accent for Quality -->
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 42px; font-weight: 900; fill: #ffffff; letter-spacing: -0.5px; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; fill: #94a3b8; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #38bdf8; }
+    
+    /* Subtle Animations */
+    @keyframes pulse-wave {
+      0% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+      50% { transform: scale(1.05) translate(-10px, 5px); opacity: 0.6; }
+      100% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+    }
+    @keyframes dash-flow {
+      to { stroke-dashoffset: -40; }
+    }
+    @keyframes check-glow {
+      0%, 100% { filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.4)); }
+      50% { filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.8)); }
+    }
+    
+    .animated-bg-circle { animation: pulse-wave 8s ease-in-out infinite; transform-origin: center; }
+    .animated-flow-line { stroke-dasharray: 10, 10; animation: dash-flow 3s linear infinite; }
+    .quality-check { animation: check-glow 3s ease-in-out infinite; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)"/>
+
+  <!-- Dynamic Background Grid / Geometric Patterns -->
+  <g opacity="0.15">
+    <path d="M 0,60 L 1200,60 M 0,120 L 1200,120 M 0,180 L 1200,180 M 0,240 L 1200,240 M 0,300 L 1200,300" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M 150,0 L 150,360 M 300,0 L 300,360 M 450,0 L 450,360 M 600,0 L 600,360 M 750,0 L 750,360 M 900,0 L 900,360 M 1050,0 L 1050,360" stroke="#94a3b8" stroke-width="1"/>
+  </g>
+
+  <!-- Animated Background Elements (Positioned away from text) -->
+  <circle class="animated-bg-circle" cx="1020" cy="180" r="140" fill="#38bdf8" opacity="0.05"/>
+  <circle class="animated-bg-circle" cx="1100" cy="80" r="90" fill="#818cf8" opacity="0.08"/>
+
+  <!-- Decorative Architectural Lines in Background -->
+  <path class="animated-flow-line" d="M 800,280 L 950,180 L 1150,220" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.4"/>
+  <path class="animated-flow-line" d="M 750,100 L 900,60 L 1100,120" fill="none" stroke="#818cf8" stroke-width="2" opacity="0.3"/>
+
+  <!-- Left Accent Bar -->
+  <rect x="50" y="65" width="8" height="230" rx="4" fill="url(#accent-grad)"/>
+
+  <!-- Foreground Content Block (Text protected from overlap) -->
+  <g transform="translate(80, 0)">
+    <!-- Category Pill -->
+    <rect x="0" y="65" width="280" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="16" y="86" class="badge-text">🏗️ CONSTRUCTION TECH ECOSYSTEM</text>
+
+    <!-- Main Title -->
+    <text x="0" y="145" class="title">Awesome Construction</text>
+    <text x="0" y="195" class="title" fill="url(#accent-grad)">Quality Management 🏗️✨</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="240" class="subtitle">Curated SaaS Platforms, BIM Model Validators &amp; Open-Source Field Tools</text>
+    <text x="0" y="270" class="subtitle" font-size="16px" fill="#64748b">ITP Workflows • Punch Lists • NCR Tracking • ISO 19650 &amp; IFC Standards</text>
+  </g>
+
+  <!-- Dynamic Right Graphic: Quality Seal & Construction Blueprint Graphic -->
+  <g transform="translate(980, 180)" class="quality-check">
+    <!-- Blueprint Hexagon Base -->
+    <polygon points="0,-70 60,-35 60,35 0,70 -60,35 -60,-35" fill="#1e293b" stroke="url(#accent-grad)" stroke-width="3"/>
+    <polygon points="0,-55 47,-27 47,27 0,55 -47,27 -47,-27" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,4"/>
+    
+    <!-- Shield / Check Quality Badge -->
+    <circle cx="0" cy="0" r="36" fill="url(#gold-grad)" filter="url(#glow)"/>
+    <path d="M -12,-2 L -4,7 L 14,-11" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
