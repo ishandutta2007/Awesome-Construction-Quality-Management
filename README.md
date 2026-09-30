@@ -63,7 +63,7 @@ Below is a curated summary of commercial enterprise construction quality managem
 
 Construction quality management has a rapidly expanding open-source ecosystem. Below are top repositories sorted by GitHub_Stars (descending):
 
-| Open-Source Project | GitHub Stars_Badge 🌟 | Description & Quality Focus 🛠️ |
+| Open-Source Project | GitHub_Stars_Badge 🌟 | Description & Quality Focus 🛠️ |
 | :--- | :--- | :--- |
 | **[IfcOpenShell / BlenderBIM](https://github.com/IfcOpenShell/IfcOpenShell)** | [<img src="https://img.shields.io/github/stars/IfcOpenShell/IfcOpenShell?style=social&color=white" alt="IfcOpenShell Stars"/>](https://github.com/IfcOpenShell/IfcOpenShell/stargazers) | **The open-source IFC toolkit & geometry engine.** Powers automated code checking, rule verification, structural compliance analysis, and BIM validation scripts in Python and C++. |
 | **[OpenConstructionERP](https://github.com/datadrivenconstruction/OpenConstructionERP)** | [<img src="https://img.shields.io/github/stars/datadrivenconstruction/OpenConstructionERP?style=social&color=white" alt="OpenConstructionERP Stars"/>](https://github.com/datadrivenconstruction/OpenConstructionERP/stargazers) | **Comprehensive open-source Construction ERP (AGPL-3.0).** Includes 192 modules with built-in **Inspection & Test Plan (ITP)** workflow: define hold/witness points, execute field checks, sign off records, and assemble audit trails. |
